@@ -1,0 +1,253 @@
+/* Estilo para o menu */
+
+  .menu-container {
+    position: relative;
+  }
+  
+  /* Menu Hamburguer */
+  .menu-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  .menu-icon .line {
+    width: 100%;
+    height: 4px;
+    background-color: #070606;
+  }
+  
+  nav {
+    background-color: #333;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Estilos para o menu visível */
+  nav.active {
+    display: block;
+  }
+  
+  /* Estilo para dispositivos móveis */
+  @media (max-width: 768px) {
+    /* Menu hamburguer visível em telas pequenas */
+    .menu-icon {
+        display: flex;
+    }
+  
+    /* Ocultar o menu por padrão em telas pequenas */
+    nav {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #030000;
+        width: 100%;
+    }
+  
+    /* Exibe o menu em telas pequenas quando "ativo" */
+    nav.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+  
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+  
+    nav ul li {
+        margin: 10px 0;
+    }
+  }
+  
+  
+
+
+
+
+
+
+  /* Estilos para a seção Galeria */
+#galeria-fotos {
+    background-size: cover;  /* A imagem cobre toda a seção */
+    background-position: center;  /* Centraliza a imagem */
+    color: white;  /* Cor do texto */
+    margin-top: 50px;  /* Adiciona um pequeno espaço de distância do menu */
+    padding: 50px 20px; /* Adiciona um pouco de padding para dar um espaçamento interno */
+  }
+  
+  h2 {
+    font-family: 'insaniburger', sans-serif;
+    font-size: 56px; /* Tamanho grande */
+    color: #e91e63; /* Cor rosa */
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  
+  /* Contêiner da galeria */
+  .galeria-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Ajuste o espaço entre os cards */
+    justify-content: center; /* Centraliza os cards */
+  }
+  
+  /* Estilo de cada card */
+  .card {
+    position: relative;
+    width: 300px; /* Largura dos cards */
+    height: 400px; /* Altura dos cards */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animações suaves */
+  }
+  
+  /* Imagem do card */
+  .card img {
+    width: 100%;
+    height: 100%; /* A imagem vai ocupar toda a altura do card */
+    object-fit: cover; /* Preenche o card sem distorcer, cortando se necessário */
+    transition: transform 0.3s ease;
+  }
+  
+  /* Efeito de zoom ao passar o mouse na imagem */
+  .card:hover img {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+  }
+  
+  /* Efeito de foco no card (aumenta o card ao passar o mouse) */
+  .card:hover {
+    transform: scale(1.05); /* Dá um pequeno efeito de zoom no card */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsividade para telas menores */
+  @media (max-width: 768px) {
+    .card {
+        width: 250px; /* Cards menores em telas pequenas */
+        height: 350px; /* Ajuste de altura para telas menores */
+    }
+  
+    #galeria h2 {
+        font-size: 48px; /* Ajuste o tamanho do título em telas menores */
+        margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+        width: 200px;
+        height: 300px; /* Ajuste para telas ainda menores */
+    }
+  
+    #galeria h2 {
+        font-size: 40px; /* Ajuste o tamanho do título em telas pequenas */
+        margin-bottom: 20px;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+    
+  /* Configuração do Rodapé Fixo */
+  footer {
+      background-color: #333;
+      color: white;
+      padding: 5px 20px; /* Ajustado para garantir espaço adequado */
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%; /* Agora ocupa 100% da largura da tela */
+      box-sizing: border-box;
+      z-index: 1000; /* Garante que o rodapé fique acima de outros conteúdos */
+  }
+  
+  /* Conteúdo do Rodapé */
+  .footer-content p {
+      font-size: 14px;
+      margin-bottom: 15px;
+  }
+  
+  /* Links das redes sociais */
+  .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+  }
+  
+  /* Estilo dos ícones sociais */
+  .social-icon, .social-icon1 {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s ease;
+  }
+  
+  .social-icon img, .social-icon1 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+  }
+  
+  .social-icon:hover, .social-icon1:hover {
+      transform: scale(1.2);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+      footer {
+          padding: 20px 10px;
+      }
+  
+      .social-links {
+          gap: 15px;
+      }
+  
+      .social-icon, .social-icon1 {
+          width: 35px;
+          height: 35px;
+      }
+  
+      .footer-content p {
+          font-size: 12px;
+      }
+  }

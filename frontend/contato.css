@@ -1,0 +1,404 @@
+/* Estilo para o menu */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-container {
+    position: relative;
+  }
+  
+  /* Menu Hamburguer */
+  .menu-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  .menu-icon .line {
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+  }
+  
+  nav {
+    background-color: #333;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Estilos para o menu visível */
+  nav.active {
+    display: block;
+  }
+  
+  /* Estilo para dispositivos móveis */
+  @media (max-width: 768px) {
+    /* Menu hamburguer visível em telas pequenas */
+    .menu-icon {
+        display: flex;
+    }
+  
+    /* Ocultar o menu por padrão em telas pequenas */
+    nav {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+    }
+  
+    /* Exibe o menu em telas pequenas quando "ativo" */
+    nav.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+  
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+  
+    nav ul li {
+        margin: 10px 0;
+    }
+  }
+  
+  
+  
+  /* Garantir que o conteúdo da página ocupe o espaço restante */
+  
+  /* Resetando margens e preenchimento */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos do conteúdo principal */
+  main {
+    flex: 1; /* Faz o conteúdo principal ocupar o espaço disponível */
+    padding: 20px;
+  }
+  
+  /* Estilos dos Cards */
+  .card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito suave ao passar o mouse */
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); /* Eleva o card ao passar o mouse */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+  }
+  
+  .card h3 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .food-selection, .cpf-input, .recheios-selection, .price, .buttons {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Container para os Cards Pagar e Histórico */
+  .cards-row {
+    display: grid; /* Usando Grid para controle mais flexível */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Ajuste dinâmico baseado no espaço disponível */
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+  }
+  
+  /* Cards específicos */
+  .card.price-card,
+  .card.history-card {
+    min-width: 50px; /* Definindo uma largura mínima */
+  }
+  
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    /* Ajuste do layout para telas pequenas */
+    footer {
+      padding: 20px 10px;
+    }
+  
+    .social-links {
+      gap: 15px;
+    }
+  
+    .social-icon, .social-icon1 {
+      width: 35px;
+      height: 35px;
+    }
+  
+    .footer-content p {
+      font-size: 12px;
+    }
+  
+    /* Ajuste para os cards ficarem empilhados em telas menores */
+    .cards-row {
+      grid-template-columns: 1fr; /* Empilha os cards na vertical */
+      gap: 10px;
+    }
+  
+    .card {
+      margin-bottom: 15px; /* Menor espaçamento entre os cards */
+    }
+  
+    /* Aumentando a largura dos botões */
+    button {
+      padding: 12px 25px;
+      font-size: 16px;
+    }
+  }
+  
+  /* Estilos para telas médias (acima de 768px até 1024px) */
+  @media (max-width: 1024px) and (min-width: 769px) {
+    /* Ajuste de layout para tablets e telas médias */
+    .cards-row {
+      grid-template-columns: repeat(2, 1fr); /* Dois cards por linha */
+    }
+  
+    .card {
+      margin-bottom: 15px;
+    }
+  
+    button {
+      padding: 12px 20px;
+      font-size: 15px;
+    }
+  }
+  
+  /* Estilos para telas grandes (acima de 1024px) */
+  @media (min-width: 1025px) {
+    .cards-row {
+      grid-template-columns: repeat(3, 1fr); /* Três cards por linha */
+      gap: 20px;
+    }
+  
+    .card {
+      margin-bottom: 20px;
+    }
+  
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+    }
+  }
+  
+   
+  
+
+
+
+
+  .container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#response {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+  
+  
+    
+  /* Configuração do Rodapé Fixo */
+  footer {
+      background-color: #333;
+      color: white;
+      padding: 5px 20px; /* Ajustado para garantir espaço adequado */
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%; /* Agora ocupa 100% da largura da tela */
+      box-sizing: border-box;
+      z-index: 1000; /* Garante que o rodapé fique acima de outros conteúdos */
+  }
+  
+  /* Conteúdo do Rodapé */
+  .footer-content p {
+      font-size: 14px;
+      margin-bottom: 15px;
+  }
+  
+  /* Links das redes sociais */
+  .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+  }
+  
+  /* Estilo dos ícones sociais */
+  .social-icon, .social-icon1 {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s ease;
+  }
+  
+  .social-icon img, .social-icon1 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+  }
+  
+  .social-icon:hover, .social-icon1:hover {
+      transform: scale(1.2);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+      footer {
+          padding: 20px 10px;
+      }
+  
+      .social-links {
+          gap: 15px;
+      }
+  
+      .social-icon, .social-icon1 {
+          width: 35px;
+          height: 35px;
+      }
+  
+      .footer-content p {
+          font-size: 12px;
+      }
+  }

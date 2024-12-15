@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+   background:url(imagens/carnes-de-sol-tapioca-e-requeijao-com-ovos-e-cuscuz-cafe-da-manha-tipico-do-nordeste-brasileiro_491130-3146.avif) ;
+   background-size: cover; /* A imagem cobre toda a tela */
+  background-position: center center; /* A imagem é centralizada */
+  background-repeat: no-repeat; /* Impede que a imagem se repita */
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+  }
+  
+  h1, h3 {
+    text-align: center;
+    color: #333;
+  }
+  
+ /* Estilos dos Cards */
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  text-align: center;
+  color: #333;
+}
+
+.food-selection, .cpf-input, .recheios-selection, .price, .buttons {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+/* Estilos para a seção Galeria */
+#galeria-fotos {
+  background-size: cover;  /* A imagem cobre toda a seção */
+  background-position: center;  /* Centraliza a imagem */
+  color: white;  /* Cor do texto */
+  margin-top: 1000px;  /* Adiciona um pequeno espaço de distância do menu */
+  padding: 50px 20px; /* Adiciona um pouco de padding para dar um espaçamento interno */
+}
+
+h2 {
+  font-family: 'insaniburger', sans-serif;
+  font-size: 56px; /* Tamanho grande */
+  color: #e91e63; /* Cor rosa */
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* Contêiner da galeria */
+.galeria-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Ajuste o espaço entre os cards */
+  justify-content: center; /* Centraliza os cards */
+}
+
+/* Estilo de cada card */
+.card {
+  position: relative;
+  width: 300px; /* Largura dos cards */
+  height: 400px; /* Altura dos cards */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animações suaves */
+}
+
+/* Imagem do card */
+.card img {
+  width: 100%;
+  height: 100%; /* A imagem vai ocupar toda a altura do card */
+  object-fit: cover; /* Preenche o card sem distorcer, cortando se necessário */
+  transition: transform 0.3s ease;
+}
+
+/* Efeito de zoom ao passar o mouse na imagem */
+.card:hover img {
+  transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+}
+
+/* Efeito de foco no card (aumenta o card ao passar o mouse) */
+.card:hover {
+  transform: scale(1.05); /* Dá um pequeno efeito de zoom no card */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .card {
+      width: 250px; /* Cards menores em telas pequenas */
+      height: 350px; /* Ajuste de altura para telas menores */
+  }
+
+  #galeria h2 {
+      font-size: 48px; /* Ajuste o tamanho do título em telas menores */
+      margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+      width: 200px;
+      height: 300px; /* Ajuste para telas ainda menores */
+  }
+
+  #galeria h2 {
+      font-size: 40px; /* Ajuste o tamanho do título em telas pequenas */
+      margin-bottom: 20px;
+  }
+}
+
+

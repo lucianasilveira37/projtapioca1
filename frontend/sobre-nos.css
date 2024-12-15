@@ -1,0 +1,83 @@
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.about-card {
+    background: linear-gradient(145deg, #ff9900, #ff6600);
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    padding: 80px;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+    overflow: hidden;
+}
+
+.card-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.card-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.card-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin: 20px 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-image img:hover {
+    transform: scale(1.05);
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

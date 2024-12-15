@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedido de Comida</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section>
+  <div>
+    <h1>Escolha sua comida</h1>
+    
+    <!-- Card de Seleção de Comida -->
+    <div class="card food-card">
+      <h3>Escolha a comida</h3>
+      <div class="food-selection">
+        <label for="food">Selecione a comida:</label>
+        <select id="food" onchange="loadRecheios()">
+          <option value="0">Selecione...</option>
+          <option value="1">Tapioca</option>
+          <option value="2">Cuscuz</option>
+          <option value="3">Sanduíche</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+    <!-- Card de CPF -->
+    <div class="card cpf-card">
+      <h3>Digite seu CPF</h3>
+      <div class="cpf-input">
+        <label for="cpf">Digite seu CPF:</label>
+        <input type="text" id="cpf" placeholder="CPF (XXX.XXX.XXX-XX)" required>
+      </div>
+    </div>
+
+    <!-- Card de Recheios -->
+    <div class="card recheios-card">
+      <h3>Escolha os recheios</h3>
+      <div id="recheiosList"></div>
+    </div>
+
+    <!-- Card de Preço Total -->
+    <div class="card price-card">
+      <h3>Preço Total: R$ <span id="totalPrice">0.00</span></h3>
+    </div>
+
+    <!-- Card de Botões de Ação -->
+    <div class="card action-card">
+      <button id="payButton" onclick="payOrder()">Pagar</button>
+      <button id="historyButton" onclick="viewHistory()">Histórico de Compras</button>
+    </div>
+  </div>
+
+  <!-- Modal de Histórico de Compras -->
+  <div id="historyModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeHistoryModal()">&times;</span>
+      <h2>Histórico de Compras</h2>
+      <div id="historyList"></div>
+    </div>
+  </div>
+</section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<section id="galeria-fotos"> 
+  <h2>Tapiocas</h2>
+  <div class="galeria-container">
+      <div class="card" data-id="1">
+          <img src="imagens/Receitas-de-tapioca.jpg" alt="Imagem 1">
+      </div>
+      <div class="card" data-id="2">
+          <img src="imagens/Receita-Tapioca-BLOG-768X648.png" alt="Imagem 2">
+      </div>
+      <div class="card" data-id="3">
+          <img src="imagens/tapioca-destaque.jpg" alt="Imagem 3">
+      </div>
+      <div class="card" data-id="4">
+          <img src="imagens/tapioca-recheada-de-carne-de-charque.jpg" alt="Imagem 4">
+      </div>
+      <div class="card" data-id="5">
+          <img src="imagens/receita-tapioca-recheada-chocolate-banana.webp" alt="Imagem 5">
+      </div>
+      <div class="card" data-id="6">
+          <img src="imagens/tapioca-scaled-2048x1396.jpg" alt="Imagem 6">
+      </div>
+  </div>
+  </section>
+
+  <section id="galeria-fotos"> 
+      <h2>Cuscuz</h2>
+      <div class="galeria-container">
+          <div class="card" data-id="1">
+              <img src="imagens/0e055015385980da4e111a90c5284edc_XL.jpg" alt="Imagem 1">
+          </div>
+          <div class="card" data-id="2">
+              <img src="imagens/cuscuz-de-milho-com-recheio-de-ricota-1.webp" alt="Imagem 2">
+          </div>
+          <div class="card" data-id="3">
+              <img src="imagens/IMG_4357.jpg" alt="Imagem 3">
+          </div>
+          <div class="card" data-id="4">
+              <img src="imagens/cuscus-com-ovo.jpg" alt="Imagem 4">
+          </div>
+          <div class="card" data-id="5">
+              <img src="imagens/thumb-large.jpg" alt="Imagem 5">
+          </div>
+          <div class="card" data-id="6">
+              <img src="imagens/1608373393-666930295.jpg" alt="Imagem 6">
+          </div>
+      </div>
+      </section>
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedido</title>
+  <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+
+  <header>
+    <div class="menu-container">
+      <div class="menu-icon" onclick="toggleMenu()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+      </div>
+
+      <!-- Menu -->
+      <nav id="menu">
+          <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="pedido.html">Pedido</a></li>
+              <li><a href="contato.html">Contato</a></li>
+              <li><a href="imagens.html">Imagens</a></li>
+              <li><a href="sobre-nos.html">Sobre Nós</a></li>
+          </ul>
+      </nav>
+  </div>
+</header>
+
+
+
+
+
+
+<div class="container">
+    <h1>Quer falar com a Tapioca da Lu?</h1>
+    <p>Use sua lábia no formulário abaixo. Vale confessar amor, sugerir, perguntar e até puxar orelha. Ouvimos na maior urgência.</p>
+    
+    <!-- Formulário de contato -->
+    <form id="contact-form">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Seu E-mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Seu Telefone</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <div id="response"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+ <!-- Rodapé com links para redes sociais -->
+
+
+ <footer>
+
+  <div class="footer-content">
+      <p>&copy; 2024 - Todos os direitos reservados</p>
+      <div class="social-links">
+          <!-- Links para as redes sociais -->
+        
+          <a href="https://www.youtube.com/@rmaeventos874" target="_blank" class="social-icon">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube">
+          </a>
+          <a href="https://www.instagram.com/rmaeventosoficial?utm_source=qr&igsh=MXEzcGdlem9nbmxreg==" target="_blank" class="social-icon">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+          </a>
+          <a href="https://www.facebook.com/francisca.silveira.315428?mibextid=ZbWKwL" target="_blank" class="social-icon">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+          </a>
+         
+      </div>
+  </div>
+</footer>
+
+
+
+
+  <script src="contato.js"></script>
+</body>
+</html>
